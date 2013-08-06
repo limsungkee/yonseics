@@ -200,6 +200,7 @@
               <li>
 								<a href="#">소모임</a>
                 <ul>
+                  <li><a href="{% url group %}">{{ "소모임 목록"|render_cyan:13 }}</a></li>
                   {% for group in user.member_groups.all %}
                   <li><a href="/board/{{ group.name }}/">{{ group.title|render_cyan:13|safe }}</a></li>
                   {% endfor %}
