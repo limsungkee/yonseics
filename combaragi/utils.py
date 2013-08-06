@@ -72,17 +72,34 @@ def CompleteHTML(html):
   # 1. Close every unclosed tags. e.g., <a
   bracket_cnt = 0
   brackets = re_findall('[<>]', html)
-  for bracket in brackets:
-    if bracket == '<':
-      bracket_cnt += 1
-    elif bracket_cnt:
-      bracket_cnt -= 1
+  is_in_pre_tag = False
+  previous_6 = ''
+  for c in html:
+    if not is_in_pre_tag:
+      if c == '<':
+        print previous_6
+        bracket_cnt += 1
+      elif c == '>':
+        print previous_6
+        bracket_cnt -= 1
+    previous_6 = (previous_6 + c)[-6:]
+    if previous_6.endswith('<pre>'):
+      is_in_pre_tag = True
+    if previous_6.endswith('</pre>'):
+      is_in_pre_tag = False
   html += '>' * bracket_cnt
   
   # 2. Close every unmatched tags. e.g., <a href="...">
   stk = []
+  is_in_pre_tag = False
   tags = [str[1:-1] for str in re_findall('<\/?\w+[\'\"a-zA-Z\.\=\ ]*>', html)]
   for tag in tags:
+    if tag == 'pre':
+      is_in_pre_tag = True
+    elif tag == '/pre':
+      is_in_pre_tag = False
+    if is_in_pre_tag:
+      continue
     if tag[0] != '/':
       stk.append(tag.split()[0].split('>')[0])
     elif tag[0] == '/' and len(stk) and stk[-1] == tag[1:]:

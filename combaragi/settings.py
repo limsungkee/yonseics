@@ -24,7 +24,7 @@ MANAGERS = ADMINS
 DATABASES = {
   'default': {
     'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-    'NAME': ROOT_PATH+'/combaragi_db',    # MySQL일 경우 DB에서 create database combaragi_test collate=utf8_general_ci로 만들어줍시다.
+    'NAME': ROOT_PATH+'/combaragi.db',    # MySQL일 경우 DB에서 create database combaragi_test collate=utf8_general_ci로 만들어줍시다.
     'USER': '',            # Not used with sqlite3.
     'PASSWORD': '',          # Not used with sqlite3.
     'HOST': '',            # Set to empty string for localhost. Not used with sqlite3.

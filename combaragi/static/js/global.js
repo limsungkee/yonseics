@@ -100,8 +100,10 @@ function confirmDefault(id, msg) {
 		dialogSpeed:'slow',
 		buttons: {
 			wrapper:'<button type="button" class="btn"></button>',
-			ok:'<span><img src="/static/images/board/yes.png"></span>',
-			cancel:'<span><img src="/static/images/board/no.png"></span>',
+			//ok:'<span><img src="/static/images/board/yes.png"></span>',
+			//cancel:'<span><img src="/static/images/board/no.png"></span>',
+			ok:'<span>네</span>',
+			cancel:'<span>아니오</span>',
 			separator:'  '
 		}
 	});

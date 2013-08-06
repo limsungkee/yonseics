@@ -10,7 +10,7 @@
 		overflow:hidden;.overflow:visible;.white-space:nowrap; .word-break:break-all;
 	}
 	
-	#Wrapper #board_list table th { font:normal 12px 돋움,dotum,sans-serif !important; color:#5C5C5C !important; padding:10px 0 7px; font-weight:bolder; }
+	#Wrapper #board_list table th { font:normal 12px "Nanum Gothic", 돋움,dotum,sans-serif !important; color:#5C5C5C !important; padding:10px 0 7px; font-weight:bolder; }
 		#Wrapper #board_list table th.col_num { background:none; }
 		#Wrapper #board_list table th.col_title { overflow:visible; }
 
@@ -99,7 +99,7 @@ span{overflow:hidden;visibility:hidden;position:absolute;top:0;left:0;width:1px;
 
 #time_diff {
   margin-top:15px;
-  font-size: 8pt;
+  font-size: 15pt;
   float: right;
 }
 

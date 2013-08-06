@@ -30,6 +30,9 @@
   <link rel="stylesheet" href="{% get_static_prefix %}css/nav.css" type="text/css" media="screen" title="no title" charset="utf-8" />
   <link rel="stylesheet" href="{% get_static_prefix %}css/style.css" type="text/css" media="screen" title="no title" charset="utf-8" />
   <link rel="stylesheet" href="{% get_static_prefix %}css/btn_pack.css" type="text/css" media="all" /-->
+  <!-- Web font -->
+  <link href='http://fonts.googleapis.com/earlyaccess/nanumgothic.css' rel='stylesheet' type='text/css' />
+  <link href='http://fonts.googleapis.com/earlyaccess/nanumpenscript.css' rel='stylesheet' type='text/css' />
 
 	<!-- jQuery framework and utilities -->
   <script type="text/javascript" src="{% get_static_prefix %}js/jquery/jquery.1.4.2.min.js"></script>
@@ -151,7 +154,7 @@
 				</p>
         {% endif %}
 				<p class="left noMargin">
-					<a href="mailto:limsungeke@gmail.com">{{ "혹시 패스워드를 분실하셨나요?"|render_cyan:13 }}</a>
+					<a href="mailto:limsungkee@gmail.com">{{ "혹시 패스워드를 분실하셨나요?"|render_cyan:13 }}</a>
 				</p>
 			</form>		
 		</div>
@@ -176,27 +179,42 @@
 						
 						<!-- Main Menu Links -->
 						<ul class="sf-menu">
-              <li class="current"><a href="{% url home %}">Home</a></li>
+              <li class="current"><a href="{% url home %}">홈</a></li>
               <li>
-								<a href="#">Members</a>
+								<a href="#">컴과사람들</a>
                 <ul>
-                  <li><a href="{% url mail %}">Mail</a></li>
+                  <li><a href="{% url mail %}">메일보내기</a></li>
 									<!--li><a href="#">Bomb</a></li-->
-                  <li><a href="{% url ranking %}">Ranking</a></li>
-                  <li><a href="{% url under_construction %}{#% url memberlist %#}">Member List</a></li>
+                  <li><a href="{% url ranking %}">순위</a></li>
+                  <li><a href="{% url under_construction %}{#% url memberlist %#}">회원들 목록</a></li>
                 </ul>
               </li>
               <li>
+								<a href="#">게시판</a>
+                <ul>
+                  {% for board in all_boards %}
+                  <li{% if board.name == board.slug %} class="currentPage"{% endif %}><a href="{% url board-list board.slug %}">{{ board.name|render_cyan:13|safe }}</a></li>
+                  {% endfor %}
+                </ul>
+              </li>
+              <li>
+								<a href="#">소모임</a>
+                <ul>
+                  {% for group in user.member_groups.all %}
+                  <li><a href="/board/{{ group.name }}/">{{ group.title|render_cyan:13|safe }}</a></li>
+                  {% endfor %}
+                </ul>
+              </li>
+              <!--li>
 								<a href="#">Study</a>
                 <ul>
-									<!--li><a href="#">Judge</a></li-->
                   <li><a href="{% url under_construction %}">Tower</a></li>
 									<li><a href="{% url under_construction %}">Wiki</a></li>
                 </ul>
               </li>
               <li>
 								<a href="{% url under_construction %}">Chatting</a>
-              </li>
+              </li-->
               <!--li>
 								<a href="#">Mobile</a>
               </li-->

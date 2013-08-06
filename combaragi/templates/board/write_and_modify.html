@@ -2,7 +2,7 @@
 {% load rendertext %}
 {% block board_title %}게시물 {{typeText}}{% endblock %}
 {% block board_head %}{% spaceless %}
-  <a href="{% url board-list board.name %}">
+  <a href="{% url board-write board.name %}">
     {% spaceless %}
     {{ board.title|render_head|safe}}
     {% if board.group_board %}

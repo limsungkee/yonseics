@@ -3,7 +3,7 @@
 
 
 body {
-	font: 13px/1.4 "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font: 10pt/1.4 "Nanum Gothic", "Trebuchet MS", Arial, Helvetica, sans-serif;
 	color: #595959;
   overflow: scroll;
 
@@ -66,17 +66,18 @@ a:hover, a:active	{ color: #d00044 ; text-decoration: none; }
 /* headings */
 
 h1, h2, h3, h4, h5, h6, .headline, .title, .ribbon span, #fancy_title div {
-	font-family: "Liberation Sans", Arial, Helvetica, Garuda, sans-serif;
+	font-family: "Nanum Pen Script", "Liberation Sans", Arial, Helvetica, Garuda, sans-serif;
 	font-weight: normal;
+  /*font-size: 2.4em;*/
 	line-height: 1;
 	margin: 0 0 0.5em;
 	padding: 0 0 0.2em;
 	color: #000;}
 	
-h1			{ font-size: 1.85em; }
-h2			{ font-size: 1.5em; }
-h3			{ font-size: 1.35em; margin-bottom: 0.5em; }
-h4			{ font-size: 1.2em; margin-bottom: 0.5em; border-bottom: none; }
+h1			{ font-size: 2.3em; }
+h2			{ font-size: 1.9em; }
+h3			{ font-size: 1.7em; margin-bottom: 0.5em; }
+h4			{ font-size: 1.6em; margin-bottom: 0.5em; border-bottom: none; }
 h5			{ font-size: 1em; font-weight: bold; margin-bottom: 0.5em; border-bottom: none; }
 h6			{ font-size: 1em; font-weight: lighter; text-transform:uppercase; margin-bottom: 0.5em; border-bottom: none; }
 .headline	{ color: #595959;}
@@ -349,7 +350,7 @@ a.img:hover img			{ border-color: #fff; }
 	
 #Header, .pageMain, #Footer {width: 990px;}	/* must be specified for PNG Fix to work (IE 6 issue) */
 
-.breadcrumbs 				{ margin-top: -1em; }
+/*.breadcrumbs 				{ margin-top: -1em; }*/
 .full-page .breadcrumbs 	{ margin-bottom: 0; }
 
 #FooterTop {
@@ -431,7 +432,7 @@ body #Footer .last 	{ background: none; }	/* no right border on last */
 	background: transparent url("../images/mainMenu-right.png") no-repeat 0 0;}
 #MmBody {
 	float: left;
-	min-width: 500px;
+	min-width: 300px;
 	height: 62px;
 	background: transparent url("../images/mainMenu-repeat.png") repeat-x 0 0;}
 
@@ -582,8 +583,8 @@ a.slidePrev:hover, a.slideNext:hover { background-position: 0 -64px;}
 
 /* info */
 #personal_info_box { margin-bottom: 15px; }
-#personal_info { width: 270px; }
-.avatar_img { float: left; }
+#personal_info { width: 250px; }
+.avatar_img { float: left; border: 1px #d7cdb4 solid; padding: 6px; background:white; }
 
 #big_stats
 { 
@@ -615,8 +616,8 @@ a.slidePrev:hover, a.slideNext:hover { background-position: 0 -64px;}
 
 .stat h4
 {
-	font-size: 12px;
-	font-weight: bold;
+	font-size: 1.8em;
+	font-weight: normal;
 	text-transform: uppercase;
 	color: #999;
 	margin-bottom: 1.5em;
@@ -751,13 +752,13 @@ button.btn span {
 button.btn:hover, button.btnHover { background-position: right -184px;} /* extra class used for sucky browsers (stupid IE) */
 button.btn:hover span, button.btnHover span {
 	background-position: 0 -46px;
-	color: #fff;
+	color: #666;
 	}
 
 button.btn:active, button.btnActive { background-position: right -230px;} /* extra class used for sucky browsers (stupid IE) */
 button.btn:active span, button.btnActive span {
   background-position: 0 -92px;
-  color: #fff;
+  color: #666;
 }
 
 .darkBg button.btn, .darkBg button.btn span,

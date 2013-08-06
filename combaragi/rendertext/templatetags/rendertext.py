@@ -126,6 +126,7 @@ def render(text, fontalias, size = 12, color = "#000", rotation = 0, bg_color = 
     
 
 def render_tag(text, *args, **kwargs):
+    return text
     """Construct image tag from text."""
     (path, width, height) = render(text, *args, **kwargs)
     if not path:

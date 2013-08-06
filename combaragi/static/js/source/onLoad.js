@@ -287,9 +287,9 @@ function buttonStyles() {
 	// Fix minor problem with Mozilla and WebKit rendering (can also be done adding this to CSS, 
 	// button::-moz-focus-inner {border: none;}
 	// @media screen and (-webkit-min-device-pixel-ratio:0) { button span {margin-top: -1px;} }
-	if (jQuery.browser.mozilla || jQuery.browser.webkit) {
-		styledButtons.children("span").css("margin-top", "-1px");
-	}
+	//if (jQuery.browser.mozilla || jQuery.browser.webkit) {
+	//	styledButtons.children("span").css("margin-top", "-1px");
+	//}
 	
 	// Button hover class (IE 6 needs this)
 	styledButtons.hover(
