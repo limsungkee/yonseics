@@ -24,6 +24,9 @@
   {% endif %}
   {% block board_breadcrumbs %}{% endblock %}
 {% endblock %}
+{% block head %}
+  {% block board_head %}{% endblock %}
+{% endblock %}
 {% block after_head %}
   {% if board.group_board %}
     <div class="ribbon">
@@ -42,7 +45,6 @@
       </div>
     </div>
   {% endif %}
-  {% block board_head %}{% endblock %}
 {% endblock %}
 
 {% block content %}

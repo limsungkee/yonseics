@@ -73,13 +73,13 @@
   <div>
     <img src="{% get_static_prefix %}images/icons/board.png" width="85" height="75" alt="computer monitor" style="float:right; margin: -2px 30px 0 15px;" /> 
     {% if must_notice %}
-      <a{% if must_notice.is_new %} class="mark_new"{% endif %} href="{% url board-read must_notice.board.name must_notice.id %}">{{ must_notice.title|render_black:24|safe }}<span></span></a> - <span>{{ must_notice.get_writerName|safe }}</span>
+      <h1><a{% if must_notice.is_new %} class="mark_new"{% endif %} href="{% url board-read must_notice.board.name must_notice.id %}">{{ must_notice.title|render_black:24|safe }}</a> - {{ must_notice.get_writerName|safe }}</h1>
       <hr />
       <p>
         {{ must_notice.content|safe|urlize|linebreaksbrpre|safe }}
       </p>
     {% else %}
-    {{ "최근 공지사항이 없습니다."|render_black:24 }}
+    <h1>{{ "최근 공지사항이 없습니다."|render_black:24 }}</h1>
     {% endif %}
   </div>
 

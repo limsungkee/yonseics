@@ -20,6 +20,12 @@ body {
 #Wrapper	{ 
   /*background: #E8EBEC url("../images/bodyBg.gif") repeat-x 0 0; */
   background-image: url("/static/images/background/spring.jpg");
+  background-image: url("http://www.unsigneddesign.com/Seamless_background_textures/thumbs/seamlesstexture1_1200.jpg");
+  background-image: url("http://www.unsigneddesign.com/Seamless_background_textures/thumbs/seamlesstexture6_1200.jpg");
+  background-image: url("http://www.unsigneddesign.com/Seamless_background_textures/thumbs/seamlesstexture26_1200.jpg");
+  background-image: url("http://www.unsigneddesign.com/Seamless_background_textures/thumbs/seamlesstexture27_1200.jpg");
+  background-image: url("http://www.unsigneddesign.com/Seamless_background_textures/thumbs/seamlesstexture19_1200.jpg");
+  background-image: url("http://www.unsigneddesign.com/Seamless_background_textures/thumbs/seamlesstexture13_1200.jpg");
   background-repeat: repeat;
   background-attachment: fixed;
   min-height: 1000px;
@@ -711,7 +717,7 @@ ul.sideNav li {
 	margin: 0;}
 	
 .quoteAuthor 			{ padding: 0 0 1em 22px;}
-.quoteAuthor p.name		{ font-weight: bold; font-size: 1.1em; color:#000; margin: 0; }
+.quoteAuthor p.name		{ font-family: "Nanum Pen Script" dotum; font-weight: normal; font-size: 1.8em; color:#000; margin: 0; }
 .quoteAuthor p.details	{ font-size: 0.9em; font-style: italic; }
 
 

@@ -23,6 +23,13 @@
   {% block group_breadcrumbs %}{% endblock %}
 {% endblock %}
 
+{% block head %}
+  {% if current_group %}
+    {{ current_group.title|render_head|safe }}
+  {% endif %}
+  {% block group_head %}{% endblock %}
+{% endblock %}
+
 {% block after_head %}
   {% if current_group %}
     <div class="ribbon">
@@ -40,9 +47,7 @@
       </span>
       </div>
     </div>
-    {{ current_group.title|render_head|safe }}
   {% endif %}
-  {% block group_head %}{% endblock %}
 {% endblock %}
 
 {% block content %}

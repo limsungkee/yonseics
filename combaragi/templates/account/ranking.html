@@ -3,7 +3,7 @@
 {% load static %}
 {% block title %}순위{% endblock %}
 {% block head %}{{ "포인트 순위"|render_head }}{% endblock %}
-{% block breadcrumbs %}{{ "Ranking"|render_bread }}{% endblock %}
+{% block breadcrumbs %}<a href="{% url ranking %}">{{ "Ranking"|render_bread }}</a>{% endblock %}
 {% block content %}
   <div class="float_right">
     {{ "내 점수: 이번달"|render_black:15 }}

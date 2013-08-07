@@ -169,6 +169,7 @@ $(document).ready(function() {
 		roundCorners(); // execute it!
 	}
 	fancySelectBox();
+  fixMargins();
 });
 
 
@@ -329,4 +330,11 @@ function fancySelectBox() {
           })
         });
   }
+}
+
+function fixMargins() {
+	if (jQuery.browser.mozilla || jQuery.browser.webkit) {
+		$(".breadcrumbs").css("margin-top", "-1em");
+	}
+  //.breadcrumbs 				{ margin-top: -1em; }*
 }

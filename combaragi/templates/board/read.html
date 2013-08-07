@@ -10,7 +10,7 @@
   <span>&raquo;</span> <a href="{% url board-read board.name bulletin.id %}">{{ bulletin.title|render_bread|safe }}</a>
 {% endblock %}
 {% block board_head %}
-  <div id="time_diff">{{ bulletin.created|humanizeTimeDiff }}에 작성됨</div>
+ <div id="time_diff" title="{{ bulletin.created|date:'Y년 n월 j일 A g시 i분 s초' }}">{{ bulletin.created|humanizeTimeDiff }}에 작성됨</div>
   {{ bulletin.title|render_head|safe }}
 {% endblock %}
 {% block content_id %}support-details{% endblock %}

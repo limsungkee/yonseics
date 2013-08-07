@@ -181,16 +181,15 @@
 						<ul class="sf-menu">
               <li class="current"><a href="{% url home %}">홈</a></li>
               <li>
-								<a href="#">컴과사람들</a>
+								<a href="{% url under_construction %}{#% url memberlist %#}">컴과 사람들</a>
                 <ul>
                   <li><a href="{% url mail %}">메일보내기</a></li>
 									<!--li><a href="#">Bomb</a></li-->
                   <li><a href="{% url ranking %}">순위</a></li>
-                  <li><a href="{% url under_construction %}{#% url memberlist %#}">회원들 목록</a></li>
                 </ul>
               </li>
               <li>
-								<a href="#">게시판</a>
+                <a href="{% url board-list 'all' %}">게시판</a>
                 <ul>
                   {% for board in all_boards %}
                   <li{% if board.name == board.slug %} class="currentPage"{% endif %}><a href="{% url board-list board.slug %}">{{ board.name|render_cyan:13|safe }}</a></li>
@@ -198,7 +197,7 @@
                 </ul>
               </li>
               <li>
-								<a href="#">소모임</a>
+								<a href="{% url group %}">소모임</a>
                 <ul>
                   <li><a href="{% url group %}">{{ "소모임 목록"|render_cyan:13 }}</a></li>
                   {% for group in user.member_groups.all %}
@@ -343,17 +342,16 @@
 						<div class="quoteBox-1">
 							<div class="quoteBox-2">
                 <!--ygo130, 14, #000-->
-                <p><a href="#">
-                  {{ "컴바라기를 같이 개발해 나갈 열정적인"|render_black:14 }}
-                  {{ "개발자를 모집합니다. 여러분의 재능을"|render_black:14 }}
-                  {{ "기부하세요!"|render_black:14 }}
-                </a></p>
+                <p>
+                  컴과 회장님의 말씀이 무언가 들어가면 좋을 것 같은 공간이다. 과연 그러한 공간이다.
+                  컴과 회장님의 말씀이 무언가 들어가면 좋을 것 같은 공간이다. 과연 그러한 공간이다.
+                </p>
 							</div>
 						</div>
 					</div>
 					<div class="quoteAuthor">
-						<p class="name">Seung-kee Lim</p>
-						<p class="details">Developer of YonseiCS.net. Yonsei Univ.</p>
+						<p class="name">123대 회장 김갑수</p>
+						<p class="details">Chairman of CS dept. Yonsei Univ.</p>
 					</div>
           {% endblock %}
         </div>
